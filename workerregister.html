@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>sign up</title>
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-form {
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 0px 100px;
+}
+
+.signup-form h1 {
+  margin-bottom: 30px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form input[type="contact"]
+ {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.signup-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #45a049;
+}
+
+.navg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  background-color: rgba(0, 0, 0, 0.651);
+  padding: 1rem;
+  color: white;
+
+
+}
+
+.navg a {
+  text-decoration: none;
+  margin: 2rem;
+  color: white;
+  font-size: 1rem;
+
+  transition: all 0.3s ease-in-out;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  list-style-type: none;
+
+}
+
+.navg li {
+  list-style-type: none;
+}
+
+.navg li a:hover {
+  background-color: rgba(8, 8, 8, 0.651)
+}
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <ul class="navg">
+      <li><a href="./home.html">Home</a></li>
+      <li><a href="./signup.html">Sign Up</a></li>
+      <li><a href="./login.html">Log In</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <form class="signup-form" action="workerregservlet" method="get">
+      <h1>Sign Up</h1>
+      <input type="text" placeholder="Full Name" name="name" required>
+      
+      <input type="contact" placeholder="Contact Number" name="contact" required>
+      <input type="password" placeholder="Password" name="password" required>
+      <input type="password" placeholder="Confirm Password" name="confirmpassword" required>
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+  
+  <script>
+    const password = document.getElementById('password');
+    const confirm_password = document.getElementById('confirmpassword');
+    const error_message = document.getElementById('error_message');
+
+    function validatePassword() {
+      if (password.value !== confirm_password.value) {
+        error_message.textContent = 'Passwords do not match!';
+      } else {
+        error_message.textContent = '';
+      }
+    }
+
+    confirm_password.addEventListener('input', validatePassword);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Worker Feedback</title>
+  <!-- <link rel="stylesheet" type="text/css" href="stylefeed.css"> -->
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .feedback-form {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .feedback-form h1 {
+    margin-bottom: 30px;
+  }
+  
+  .feedback-form form {
+    text-align: left;
+  }
+  
+  .feedback-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  .feedback-form input[type="text"],
+  .feedback-form select,
+  .feedback-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 4px;
+  }
+  
+  .feedback-form textarea {
+    resize: vertical;
+  }
+  
+  .feedback-form button {
+    background-color: #69a9dd;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .feedback-form button:hover {
+    background-color: #5da2ca;
+  }
+  
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="feedback-form">
+      <h1>Feedback</h1>
+      <form action="feedbackworkservlet" method="get">
+        <label for="homeownerid">homeowner id:</label>
+        <input type="text" id="homeownerid" name="homeownerid" required>
+        
+     
+        
+        
+        <label for="rating">Rating:</label>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+
+
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="5" required></textarea>
+        
+        <button type="submit">Submit Feedback</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

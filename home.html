@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>househelp</title>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+
+}
+
+.navg {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem;
+  background-color: rgba(0, 0, 0, 0.651);
+  padding: 2rem;
+  color: white;
+  font-size: large;
+
+}
+
+.navg a {
+  text-decoration: none;
+  margin: 2rem;
+  color: white;
+  font-size: 2rem;
+
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  border-radius: 1rem;
+  list-style-type: none;
+
+}
+
+.navg li {
+  list-style-type: none;
+}
+
+.navg li a:hover {
+  background-color: rgba(8, 8, 8, 0.651)
+}
+
+.welcome {
+  font-size: 3rem;
+  margin-top: 1rem;
+  animation: slide 10s infinite ease-in-out;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(-10%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+
+
+}
+
+.header {
+  /* height:100vh; */
+  background: url('./images/pexels-fwstudio-129731.jpg');
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header nav ul li {
+  list-style-type: none;
+}
+
+.header nav li a {
+  text-decoration: none;
+  margin: 2rem;
+  color: white;
+  font-size: 2rem;
+
+  transition: all 0.3s ease-in-out;
+  padding: 1rem;
+  border-radius: 1rem;
+
+}
+
+.header nav li a:hover {
+  background-color: rgba(8, 8, 8, 0.651)
+}
+
+.block {
+  display: flex;
+  margin: 10rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap;
+  box-shadow: 0px 0px 25px 0px rgb(2, 2, 2);
+  justify-content: center;
+
+}
+
+.block .img {
+  flex-grow: 1;
+  width: 40%;
+  flex-shrink: 1;
+  transform: translateX(-100%);
+
+  animation: position 0.3s forwards ease-in-out;
+}
+
+@keyframes position {
+  100% {
+    transform: translate(0%);
+
+  }
+
+}
+
+.block .img img {
+  height: 100%;
+  width: 100%;
+}
+
+.block .text {
+  padding: 5rem;
+  line-height: 2em;
+  flex-grow: 1;
+  flex-shrink: 1;
+  text-align: center;
+  padding: auto;
+  width: 40%;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(5, 5, 5, 0.678);
+  transform: translateX(100%);
+  animation: position 0.3s forwards ease-in-out;
+}
+
+.button {
+  width: 10%;
+  padding: 7em;
+  border-radius: 5em;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.863);
+  color: aliceblue;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: rgb(0, 0, 0);
+  color: white;
+}
+
+.button a {
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 8em;
+}
+
+/* signup */
+.sign {
+  font-size: 50px;
+  padding: 2em;
+}
+  </style>
+  
+</head>
+
+<body>
+  <div class="header">
+    <nav>
+      <ul class="navg">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./signup.html">Sign Up as Homeowner</a></li>
+        <li><a href="./workerregister.html">Sign Up as Worker</a></li>
+        <li><a href="./loginfirst.html">Log In as Homeowner</a></li>
+        <li><a href="./workfirst.html">Log In as Worker</a></li>
+      </ul>
+    </nav>
+    <p class="welcome">
+      welcome to our help centre
+    </p>
+    <div class="block">
+      <div class="img">
+
+        <img src="./images/profile.jpeg" alt="">
+      </div>
+      <div class="text">
+        We provide you a platform that will help you to connect with your required service providers with one click.
+        we are the most trusted to provide you fantastic services.Enjoy comforts of not having to do domestic chores
+        hire trained,hygienic and trustworthy service provider for yourself !!!.
+      </div>
+    </div>
+    <div class="button">
+      <a href="./signup">Get Started</a>
+    </div>
+  </div>
+
+</body>
+
+</html>

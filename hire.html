@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Login Page</title>
+  <link rel="stylesheet" type="text/css" href="stylelog.css">
+  <style>
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+.head{
+  
+  text-align: center;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-form {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 30px;
+  
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #45a049;
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h1 class="head">WELCOME TO HIRING PAGE</h1>
+  <div class="container">
+    <form class="login-form" action="hire" method="get">
+      <h1>Hire</h1>
+        <input type="text" placeholder="Enter your id" name="custid" required>
+      <input type="text" placeholder="Enter id of worker" name="id" required>
+      <input type="text" placeholder="Enter the name of worker" name="name" required>
+      <button type="submit">Hire</button>
+    </form>
+  </div>
+</body>
+
+</html>
